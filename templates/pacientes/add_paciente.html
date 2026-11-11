@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+Aidicionar Paciente{{ block.super}}
+{% endblock %}
+
+{ % block body% }
+<br />
+<b>Cadastro de Pacientes</b>
+<br />
+<form action="" method="POST">
+    {% csrf_token %}
+    <label>id_paciente</label>
+    <br />
+    {{ form.id_paciente}}
+</form>
+
+{% endblock %}
