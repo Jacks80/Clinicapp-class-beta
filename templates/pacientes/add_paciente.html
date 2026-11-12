@@ -8,9 +8,9 @@ Aidicionar Paciente{{ block.super}}
 <br />
 <form action="" method="POST">
     {% csrf_token %}
-    <label>id_paciente</label>
+    <label>nome</label>
     <br />
-    {{ form.id_paciente}}
+    {{ form.nome}}
 </form>
 
 {% endblock %}

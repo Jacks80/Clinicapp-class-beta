@@ -7,7 +7,7 @@ from .models import Paciente
 
 def add_paciente(request):
     template_name = 'pacientes/add_paciente.html'
-    context = ()
+    context = {}
     if request.method == 'POST':
         form = PacienteForm(request.POST)
         if form.is_valid():
@@ -17,4 +17,6 @@ def add_paciente(request):
             return redirect('core:home')
         form = PacienteForm()
         context['form'] = form
-        return render(request, template_name, context)
+        return render(template_name, context)
+
+

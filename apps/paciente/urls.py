@@ -3,6 +3,6 @@ from . import views
 
 app_name = 'pacientes'
 
-urlpatterns = {
-    path('add_p', views.add_paciente, name ='add_paciente'),
-}
+urlpatterns = [
+   path('add/', views.add_paciente, name ='add_paciente'),
+]
