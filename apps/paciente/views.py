@@ -17,6 +17,6 @@ def add_paciente(request):
             return redirect('core:home')
         form = PacienteForm()
         context['form'] = form
-        return render(template_name, context)
+        return render(request,template_name, context)
 
 
