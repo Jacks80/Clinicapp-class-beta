@@ -15,8 +15,8 @@ def add_paciente(request):
             f.save()
             form.save_m2m()
             return redirect('core:home')
-        form = PacienteForm()
-        context['form'] = form
-        return render(request,template_name, context)
+    form = PacienteForm()
+    context['form'] = form
+    return render(request,template_name, context)
 
 
